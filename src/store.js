@@ -1,16 +1,18 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import reducers from './reducers'
-//import createLogger from 'redux-logger'
+import { createStore, applyMiddleware, compose } from 'redux';
+import reducers from './reducers';
+import createLogger from 'redux-logger';
+import multi from 'redux-multi';
+
 //import createSagaMiddleware from 'redux-saga'
 
-//const logger = createLogger()
+const logger = createLogger()
 //const sagaMiddleware = createSagaMiddleware()
 
 export default function configureStore(initialState = {}) {
   // Create the store with two middlewares
   const middlewares = [
   //  sagaMiddleware
-  //, logger
+   logger
   ]
 
   const enhancers = [
@@ -21,6 +23,7 @@ export default function configureStore(initialState = {}) {
     reducers
   , initialState
   , compose(...enhancers)
+  ,multi
   )
 
   // Extensions
