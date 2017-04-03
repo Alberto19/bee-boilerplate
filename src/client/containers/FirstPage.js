@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
-import * as userActions from '../actions/user'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router'
-import './FirstPage.css'
+import * as userActions from '../actions/user';
+import './FirstPage.css';
 
 class FirstPage extends Component {
   render() {

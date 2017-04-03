@@ -5,8 +5,8 @@ import React from 'react'
 import {renderToString} from 'react-dom/server'
 import {match, RouterContext} from 'react-router'
 
-import createRoutes from '../src/routes'
-import configureStore from '../src/store'
+import createRoutes from '../client/routes'
+import configureStore from '../client/store'
 import {Provider} from 'react-redux'
 
 const routes = createRoutes({})
