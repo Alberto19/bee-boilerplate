@@ -13,9 +13,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  var bind = typeof port === 'string'? 'Pipe ' + port : 'Port ' + port; //eslint-disable-line
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
