@@ -1,32 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import * as userActions from '../actions/user';
-import './SecondPage.css';
+import bold from './SecondPage.css';
 
-class SecondPage extends Component {
-  render() {
-    return (
-      <div className='bold'>
-        <p>
-          Second Page
-        </p>
-        <Link to={'/'}>First</Link>
-      </div>
-    )
-  }
-}
+const SecondPage = () => (
+  <div className={bold}>
+    <p>Second Page</p>
+    <Link to={'/'}>First</Link>
+  </div>
+);
 
 const mapStateToProps = state => ({
-  user: state.user
+  user: state.user,
 });
 
 const mapDispatchToProps = dispatch => ({
-  userActions: bindActionCreators(userActions, dispatch)
+  userActions: bindActionCreators(userActions, dispatch),
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(SecondPage);

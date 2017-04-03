@@ -1,5 +1,5 @@
-const prefix = 'USER/'
+const prefix = 'USER/';
 
-export const SET = prefix + 'SET'
-export const RESET = prefix + 'RESET'
+export const SET = `${prefix} + SET`;
+export const RESET = `${prefix} + RESET`;
 

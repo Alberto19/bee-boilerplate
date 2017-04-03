@@ -1,15 +1,15 @@
-import { SET, RESET } from '../types/user'
+import { SET, RESET } from '../types/user';
 
-export function set(payload){
+export function set(payload) {
   return {
-    type: SET
-  , payload
-  }
+    type: SET,
+    payload,
+  };
 }
 
-export function reset(){
+export function reset() {
   return {
-    type: RESET
-  }
+    type: RESET,
+  };
 }
 
